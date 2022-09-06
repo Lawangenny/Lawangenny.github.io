@@ -8,7 +8,7 @@ Criação de um currículo, estilo site web. Para conclusão do curso Garotas Di
 
 
 - [ ] Sobre mim
-    - [ ] Carousel 
+    - [X] Carousel (Após ajuste de legenda, atualizar os videos de background de acordo com o assunto)
     - [ ] Legenda do carrousel
 
 
