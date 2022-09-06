@@ -4,7 +4,7 @@ Criação de um currículo, estilo site web. Para conclusão do curso Garotas Di
 
 
 ### Inicio
-- [ ] Cabeçalho
+- [X] Cabeçalho
 
 
 - [ ] Sobre mim
