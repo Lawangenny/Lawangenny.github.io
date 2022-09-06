@@ -182,7 +182,6 @@ input{
 	margin: 0.5%;
 	box-sizing: border-box;
 	border: 1px solid white;
-	border-radius: 10px;
 }
 
 .educacao li:hover{
@@ -258,7 +257,7 @@ input{
 
 /*_______________Fim das Habilidades_______________*/
 
-/*.fundo-sobremim{     - ADICIONAR PARA O BACKGROUND DE VIDEO FIXO!
+/*.fundo-sobremim{     - ADICIONAR PARA O BACKGROUND DE VIDEO FIXO/Caso não dê certo as legendas!
 	width: 100%;
 	overflow: hidden; ----serve para retirar o scroll
 	display: flex;
@@ -319,13 +318,3 @@ input{
 	text-align: center;
 	z-index: 1;
 }
-
-
-
-
-/*                    <div class="conteudo-sobremim">
-                        <h1 class="titulos">Hello Word!</h1>
-                        <p class="textos">Bem vindo(a) ao meu portifólio!</p>
-                        <p class="textos">Meu nome é Lawrienny Angenny, eu sou Técnica de Informática e Desenvolvedora Full Stack Jr.</p>
-                        <p class="textos-menores">(Passe para o lado ou aguarde alguns segundos para conhecer um pouco mais sobre mim.)</p>
-                    </div>
