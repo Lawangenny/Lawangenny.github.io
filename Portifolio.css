@@ -1,0 +1,331 @@
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 700vh;
+	background-color: black;
+}
+
+header{
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	top: 0;
+	z-index: 100; /*Ordem do elemento na profundidade (quanto maior, mais a frente...)*/
+    transition: background-color 1s ease-in-out;/*Transição do header*/
+}
+
+.changeStyle {
+  background-color: rgba(0, 0, 0, 0.9); /*Muda a cor do header ao scrollar*/
+}
+
+ 
+.caixa-header{
+	position: sticky;
+	padding: 10px 0 10px 0;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	top: 0px;
+}
+
+.titulo-header{
+	text-decoration: none;
+	position: absolute;
+	color: white;
+	font-family: 'Parisienne', cursive;
+	font-size: 25px;
+	padding: 5px 0;
+	top: 10px;
+	left: 30px;
+}
+
+nav{
+	position: relative;
+	font-family: 'Playfair Display', serif;;
+	top: 3px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 7px 0 7px 0;
+}
+
+nav li{
+	display: inline;
+	margin: 0 0 0 12px;
+}
+
+nav a{
+	text-transform: uppercase;
+	color: lightgrey;
+	font-weight: bold;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+a{
+	transition: .6s;
+}
+
+ a:hover{
+	color: white;
+}
+
+.logos-header{
+	position: absolute;
+	top: 15px;
+	right: 30px;
+	padding: 5px 0;
+}
+
+.logos-header a{
+	padding: 0 5px;
+}
+
+/*--------------------------Incio Caixa sobre mim--------------------------*/
+
+.caixa-sobremim{
+	height: 650px;
+	width: 100vw;	
+	overflow: hidden;
+	position: absolute;
+	top:0;
+	margin: 0;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.navegação{
+	position: absolute; /*Qualquer lugar da tela/elemento pai*/
+	bottom: 7%;
+	left: 50%;
+	transform:translate(-50%) ;
+	display: flex;
+}
+
+.bar{
+	width: 40px;
+	height: 17px;
+	border: 1px solid #fff;
+	margin: 6px;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .4s;
+}
+
+.bar:hover{
+	background-color: #fff;
+}
+
+input{
+	display: none;
+}
+
+.caixa-slides{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	width: 500%;
+	height: 100%;
+}
+
+.slide{
+	width: 20%;
+	transition: .6s;
+}
+
+.slide video{
+	width: 100%;
+	z-index: -99;/*ADD DPS*/
+}
+
+#slide1:checked ~ .s1{
+	margin-left: 0;
+}
+
+#slide2:checked ~ .s1{
+	margin-left: -20%;
+}
+#slide3:checked ~ .s1{
+	margin-left: -40%;
+}
+
+#slide4:checked ~ .s1{
+	margin-left: -60%;
+}
+
+#slide5:checked ~ .s1{
+	margin-left: -80%;
+}
+
+/*____________________________Inicio Educação________________________________*/
+
+.caixa-educacao{
+	position: relative;
+	top: 750px;
+}
+
+.educacao{
+	width: 1000px;
+	margin: 0 auto ;
+	height: auto;
+	right: auto;
+	padding: 50px 0;
+}
+
+.educacao li{
+	display: inline-block;
+	background-color: rgba(255,255,240, 0.7);
+	text-align: center;
+	width: 32%;
+	height: 200px;
+	vertical-align: top;
+	margin: 0.5%;
+	box-sizing: border-box;
+	border: 1px solid white;
+	border-radius: 10px;
+}
+
+.educacao li:hover{
+	background-color: white;
+	border: 2px solid #FFFFFF;
+	color: white;
+}
+
+
+.educacao li:active{
+	background-color: rgba(255,20,147, 1);
+	border: 2px solid #FF69B4;
+}
+
+.educacao li:hover h2{
+	font-size: 24px;
+}
+
+.titulo-educacao{
+	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;
+	color: black;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px 5px 0;
+}
+
+.titulo-educacao2{
+	font-family: 'Playfair Display', serif;
+	color: black;
+	font-size: 15px;
+	padding: 4px 5px 10px;
+}
+
+.educacao-descricao{
+	position: sticky;
+	bottom: 5px;
+	font-family: 'Playfair Display', serif;
+	text-align: left;
+	color: black;
+	font-size: 18px;
+	padding: 5px 3%;
+	
+}
+
+#descricao1{
+	padding: 37px 0 7px ;
+}
+
+#descricao2{
+	padding: 5px 0 10px;
+}
+
+#descricao3{
+	padding: 25px 0 7px;
+}
+
+/*________________FIm Educação________________________*/
+
+/*_______________Inicio das Habilidades_______________*/
+
+.caixa-habilidades{
+	position: relative;
+	top: 850px;
+}
+
+.logos-habilidades{
+	text-align: center;
+}
+#logo-linux{
+	width: 20em;
+}
+
+/*_______________Fim das Habilidades_______________*/
+
+/*.fundo-sobremim{     - ADICIONAR PARA O BACKGROUND DE VIDEO FIXO!
+	width: 100%;
+	overflow: hidden; ----serve para retirar o scroll
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fundo-sobremim video{
+	position: absolute;
+	width: 100%;
+	max-height: 670px;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	z-index: -1;
+}
+.fundo-sobremim .conteudo-sobremim{
+	position: relative;
+	max-width: 600px;
+	margin: 0 auto;
+}
+*/
+
+.conteudo-sobremim{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%) ;
+	z-index: 99;
+	font-family: 'Playfair Display', serif;
+	justify-content: center;
+	align-items: center;
+}
+
+.titulos{
+	font-family: 'Playfair Display', serif;
+	padding: 20px 0 40px 0;
+	text-transform: uppercase;
+	color: white;
+	font-size: 3em;
+	text-align: center;
+	z-index: 1;
+}
+
+.textos{
+	font-family: 'Playfair Display', serif;
+	color: white;
+	padding: 10px 0 0;
+	font-size: 1.4em;
+	text-align: center;
+	z-index: 1;
+}
+
+.textos-menores{
+	font-family: 'Playfair Display', serif;
+	color: white;
+	padding: 10px 0 0;
+	font-size: 1.em;
+	text-align: center;
+	z-index: 1;
+}
+
+
+
+
+/*                    <div class="conteudo-sobremim">
+                        <h1 class="titulos">Hello Word!</h1>
+                        <p class="textos">Bem vindo(a) ao meu portifólio!</p>
+                        <p class="textos">Meu nome é Lawrienny Angenny, eu sou Técnica de Informática e Desenvolvedora Full Stack Jr.</p>
+                        <p class="textos-menores">(Passe para o lado ou aguarde alguns segundos para conhecer um pouco mais sobre mim.)</p>
+                    </div>
