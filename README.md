@@ -4,5 +4,18 @@ Criação de um currículo, estilo site web. Para conclusão do curso Garotas Di
 
 
 ### Inicio
-- [ ] Background
 - [ ] Cabeçalho
+
+- [ ] Sobre mim
+    - [ ] Carousel 
+    - [ ] Legenda do carrousel
+
+- [ ] Educação
+
+- [ ] Habilidades
+
+- [ ] Experiência
+
+- [ ] Interesses
+
+- [ ] Footer
