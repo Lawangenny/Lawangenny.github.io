@@ -4,7 +4,7 @@ Criação de um currículo, estilo site web. Para conclusão do curso Garotas Di
 
 
 ### Inicio
-- [X] Cabeçalho
+- [X] Cabeçalho (Se der tempo, add efeito sublinhado no hover)
 
 
 - [ ] Sobre mim
@@ -24,4 +24,4 @@ Criação de um currículo, estilo site web. Para conclusão do curso Garotas Di
 - [ ] Interesses
 
 
-- [ ] Footer
+- [ ] Footer (Add meios de contato. Colocar whatsapp)
