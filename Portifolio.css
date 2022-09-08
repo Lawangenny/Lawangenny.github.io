@@ -38,6 +38,7 @@ header{
 	padding: 5px 0;
 	top: 10px;
 	left: 30px;
+	transition: .6s;
 }
 
 nav{
@@ -56,7 +57,7 @@ nav li{
 
 nav a{
 	text-transform: uppercase;
-	color: lightgrey;
+	color: white;
 	font-weight: bold;
 	font-size: 13px;
 	text-decoration: none;
@@ -67,7 +68,7 @@ a{
 }
 
  a:hover{
-	color: white;
+	color: #bd0045;
 }
 
 .logos-header{
@@ -81,6 +82,15 @@ a{
 	padding: 0 5px;
 }
 
+.fa-discord, .fa-instagram, .fa-github, .fa-linkedin, .fa-whatsapp, .fa-envelope{
+	font-size: 20px;
+	color: white;
+	transition: .3s;
+}
+
+.fa-discord:hover, .fa-instagram:hover, .fa-github:hover, .fa-linkedin:hover, .fa-whatsapp:hover, .fa-envelope:hover{
+	color: #bd0045;
+}
 /*--------------------------Incio Caixa sobre mim--------------------------*/
 
 .caixa-sobremim{
@@ -109,11 +119,17 @@ a{
 	margin: 6px;
 	border-radius: 3px;
 	cursor: pointer;
-	transition: .4s;
+	transition: 2s;
 }
 
 .bar:hover{
-	background-color: #fff;
+	background-color: #bd0045;
+	border: none;
+}
+
+.bar:active{
+	background-color: #bd0045;
+	transform: scale(%50);
 }
 
 input{
@@ -129,13 +145,31 @@ input{
 }
 
 .slide{
+	position: relative;
 	width: 20%;
 	transition: .6s;
 }
 
 .slide video{
+	filter: brightness(1);
 	width: 100%;
 	z-index: -99;/*ADD DPS*/
+}
+
+.legenda-slide{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#video4,#video5{
+	
+}
+
+.slide img{
+	position: absolute;
+	top: 160px;
 }
 
 #slide1:checked ~ .s1{
@@ -169,31 +203,32 @@ input{
 	margin: 0 auto ;
 	height: auto;
 	right: auto;
-	padding: 50px 0;
+	padding: 70px 0;
 }
 
 .educacao li{
 	display: inline-block;
-	background-color: rgba(255,255,240, 0.7);
+	background-color: black
+	color: white;
 	text-align: center;
 	width: 32%;
 	height: 200px;
 	vertical-align: top;
 	margin: 0.5%;
 	box-sizing: border-box;
-	border: 1px solid white;
+	border: 1px solid #a3004f;
+	transition: 0.8s;
 }
 
 .educacao li:hover{
-	background-color: white;
-	border: 2px solid #FFFFFF;
-	color: white;
+	border: 2px solid #000;
+	background: linear-gradient(black , rgba(163, 0, 79, 0.5));
 }
 
 
 .educacao li:active{
 	background-color: rgba(255,20,147, 1);
-	border: 2px solid #FF69B4;
+	border: 2px solid #a3004f;
 }
 
 .educacao li:hover h2{
@@ -203,7 +238,7 @@ input{
 .titulo-educacao{
 	font-family: 'Playfair Display', serif;
 	text-transform: uppercase;
-	color: black;
+	color: #a3004f;
 	font-size: 15px;
 	font-weight: bold;
 	padding: 10px 5px 0;
@@ -211,7 +246,7 @@ input{
 
 .titulo-educacao2{
 	font-family: 'Playfair Display', serif;
-	color: black;
+	color: white;
 	font-size: 15px;
 	padding: 4px 5px 10px;
 }
@@ -221,10 +256,18 @@ input{
 	bottom: 5px;
 	font-family: 'Playfair Display', serif;
 	text-align: left;
-	color: black;
+	color: white;
 	font-size: 18px;
 	padding: 5px 3%;
 	
+}
+
+.educacao li:hover .titulo-educacao2, .educacao li:hover .educacao-descricao {
+	color: white;
+}
+
+.educacao li:hover .titulo-educacao{
+	transform: scale(110%);
 }
 
 #descricao1{
@@ -244,16 +287,69 @@ input{
 /*_______________Inicio das Habilidades_______________*/
 
 .caixa-habilidades{
+	/*background: linear-gradient(5deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%);*/
 	position: relative;
 	top: 850px;
 }
 
 .logos-habilidades{
+	padding: 50px 0  80px;
 	text-align: center;
 }
 #logo-linux{
 	width: 20em;
 }
+
+.grid-container {
+	display: inline-grid;
+	grid-template-columns: auto auto auto;
+	padding: 5px;
+	margin: 0 auto ;
+	gap: 50px;  
+}
+
+.grid-item{
+	font-family: 'Playfair Display', serif;
+	color: white;
+	text-transform: uppercase;
+	padding: 10px;
+	width: 200px;
+  margin: 0 auto;
+  gap: 300px 300px;
+  text-align: center;
+  border: 1px solid #fff;
+  transition: .6s;
+}
+
+.grid-item p {
+	padding: 5px;
+	font-weight: bold;
+}
+
+.grid-item:hover{
+	background-color: rgba(189, 0, 69, 1);
+	border: none;
+	bottom: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%);
+	transform: scale(120%);
+}
+
+.fa-users-line, .fa-puzzle-piece{
+	position: relative;
+	padding: 10px;
+	color: rgba(189, 0, 69, 1);
+	font-size: 70px;
+}
+
+.grid-item:hover .fa-users-line, .grid-item:hover .fa-puzzle-piece{
+	position: relative;
+	padding: 10px;
+	color: #fff;
+	transform: scale(120%);
+}
+
+
 
 /*_______________Fim das Habilidades_______________*/
 
@@ -293,7 +389,7 @@ input{
 
 .titulos{
 	font-family: 'Playfair Display', serif;
-	padding: 20px 0 40px 0;
+	padding: 90px 0 40px 0;
 	text-transform: uppercase;
 	color: white;
 	font-size: 3em;
@@ -303,8 +399,9 @@ input{
 
 .textos{
 	font-family: 'Playfair Display', serif;
+	width: 1000px;
 	color: white;
-	padding: 10px 0 0;
+	padding: 10px 0 10px;
 	font-size: 1.4em;
 	text-align: center;
 	z-index: 1;
