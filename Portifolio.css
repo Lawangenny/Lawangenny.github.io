@@ -651,8 +651,8 @@ input{
 
 #caixa-grid-interesses{
 	display: inline-grid;
-	grid-template-columns: auto;
-	grid-template-rows: auto;
+	grid-template-columns: 30% 35% 30%;
+	grid-template-rows: 100%;
 	padding: 10px 0 10px;
 	margin: 0 auto;
 	gap: 10px;  
