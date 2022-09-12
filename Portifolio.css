@@ -2,7 +2,7 @@ body{
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	height: 700vh;
+	height: auto;
 	background-color: black;
 }
 
@@ -15,10 +15,42 @@ header{
     transition: background-color 1s ease-in-out;/*Transição do header*/
 }
 
-.changeStyle {
-  background-color: rgba(0, 0, 0, 0.9); /*Muda a cor do header ao scrollar*/
+.titulos{
+	font-family: 'Playfair Display', serif;
+	padding: 90px 0 40px 0;
+	color: white;
+	text-transform: uppercase;
+	font-size: 3em;
+	text-align: center;
+	z-index: 1;
 }
 
+.textos{
+	font-family: 'Playfair Display', serif;
+	width: 1000px;
+	color: white;
+	padding: 10px 0 10px;
+	font-size: 1.4em;
+	text-align: center;
+	z-index: 1;
+}
+
+.textos-menores{
+	font-family: 'Playfair Display', serif;
+	color: white;
+	padding: 10px 0 0;
+	font-size: 1.em;
+	text-align: center;
+	z-index: 1;
+}
+
+.changeStyle {
+  background-color: rgba(0, 0, 0, 0.2); /*Muda a cor do header ao scrollar*/
+}
+
+.changeStyle + .titulo-header + nav a {
+  color: black;
+}
  
 .caixa-header{
 	position: sticky;
@@ -63,12 +95,28 @@ nav a{
 	text-decoration: none;
 }
 
-a{
-	transition: .6s;
+#title-sobreMim:hover{
+	color: black;
 }
 
- a:hover{
-	color: #bd0045;
+#title-educacao:hover{
+	color: #000080;
+}
+
+#title-habilidade:hover{
+	color: rgba(189, 0, 69, 1);
+}
+
+#title-experiencia:hover{
+	color: #FF4500  ;
+}
+
+#title-interesse:hover{
+	color: #006400 ;
+}
+
+a{
+	transition: .8s;
 }
 
 .logos-header{
@@ -89,7 +137,7 @@ a{
 }
 
 .fa-discord:hover, .fa-instagram:hover, .fa-github:hover, .fa-linkedin:hover, .fa-whatsapp:hover, .fa-envelope:hover{
-	color: #bd0045;
+	transform: scale(125%);
 }
 /*--------------------------Incio Caixa sobre mim--------------------------*/
 
@@ -104,12 +152,27 @@ a{
 	transform: translate(-50%);
 }
 
+.conteudo-sobremim{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%) ;
+	z-index: 99;
+	font-family: 'Playfair Display', serif;
+	justify-content: center;
+	align-items: center;
+}
+
 .navegação{
 	position: absolute; /*Qualquer lugar da tela/elemento pai*/
 	bottom: 7%;
 	left: 50%;
 	transform:translate(-50%) ;
 	display: flex;
+}
+
+#titulo-hello{
+	text-align: center;
 }
 
 .bar{
@@ -123,12 +186,12 @@ a{
 }
 
 .bar:hover{
-	background-color: #bd0045;
-	border: none;
+	background-color: #fff;
+	border: 1px solid #fff;
 }
 
 .bar:active{
-	background-color: #bd0045;
+	background-color: #fff;
 	transform: scale(%50);
 }
 
@@ -151,7 +214,6 @@ input{
 }
 
 .slide video{
-	filter: brightness(1);
 	width: 100%;
 	z-index: -99;/*ADD DPS*/
 }
@@ -163,8 +225,29 @@ input{
 	transform: translate(-50%, -50%);
 }
 
-#video4,#video5{
-	
+.titulo-colorido{
+	font-size: 60px;
+	text-align: center;
+	display: inline-block;
+}
+
+#titulo-color1{
+	color: #3fff00;
+}
+
+#titulo-color2{
+	color: #cb006e;
+	text-transform: uppercase;
+
+}
+
+#titulo-color3{
+	color: #e74103;
+	text-transform: uppercase;
+}
+
+#titulo-color4{
+	color: yellow;
 }
 
 .slide img{
@@ -194,61 +277,107 @@ input{
 /*____________________________Inicio Educação________________________________*/
 
 .caixa-educacao{
+	background-color: #35d3e3;
 	position: relative;
-	top: 750px;
+	top: 650px;
+	height: 680px;
+}
+.formacao-academica h3, .Projetos h3, .Empregos h3, .Cursos h3{
+	font-size: 20px;
+	margin: 5x 0;
 }
 
-.educacao{
-	width: 1000px;
+.grid-cursos{
+	display: inline-grid;
+	grid-template-columns: auto auto auto;
+	padding: 5px;
+	margin: 0 auto;
+	gap: 10px;  
+	text-align: center;
+}
+.item-curso{
+	padding: 10px 5px;
+	text-transform: uppercase;
+	color: #000080;
+	background-color: none;
+	border: 1px solid #000080;
+	width: 18.6em;
+	height: auto;
+}
+
+.item-curso:hover{
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, .1);
+}
+
+.formacao-academica, .Cursos{
+	width: 60em;
 	margin: 0 auto ;
 	height: auto;
 	right: auto;
-	padding: 70px 0;
+	padding: 5px 0;
 }
 
-.educacao li{
+.titulo-item-curso{
+	font-size: 0.8em;
+	text-transform: uppercase;
+	text-align: center;
+	top: 1em;
+}
+
+.descricao-item-curso{
+	text-transform: none;
+	color: black;
+	font-size: 0.8em;
+	text-align: left;
+	top: 0.4em;
+}
+
+.formacao-academica li{
 	display: inline-block;
 	background-color: black
-	color: white;
+	color: black;
 	text-align: center;
 	width: 32%;
 	height: 200px;
 	vertical-align: top;
 	margin: 0.5%;
 	box-sizing: border-box;
-	border: 1px solid #a3004f;
+	border: 1px solid #000080;
 	transition: 0.8s;
 }
 
-.educacao li:hover{
-	border: 2px solid #000;
-	background: linear-gradient(black , rgba(163, 0, 79, 0.5));
+.formacao-academica li:hover{
+	border: 0;
+	background-color: rgba(0,0,128, .8);
 }
 
-
-.educacao li:active{
-	background-color: rgba(255,20,147, 1);
-	border: 2px solid #a3004f;
-}
-
-.educacao li:hover h2{
+.formacao-academica li:hover h2{
 	font-size: 24px;
 }
 
-.titulo-educacao{
+#educacao{
+	color: #000080;
+}
+
+.titulo-educacao, .formacao-academica h3, .Cursos h3 {
 	font-family: 'Playfair Display', serif;
 	text-transform: uppercase;
-	color: #a3004f;
-	font-size: 15px;
+	color: #000080;
 	font-weight: bold;
 	padding: 10px 5px 0;
 }
 
-.titulo-educacao2{
-	font-family: 'Playfair Display', serif;
-	color: white;
+.titulo-educacao{
 	font-size: 15px;
-	padding: 4px 5px 10px;
+}
+
+.subtitulo-educacao{
+	text-transform: uppercase;
+	font-family: 'Playfair Display', serif;
+	color: black;
+	font-size: 15px;
+	padding: 4px 5px 5px;
 }
 
 .educacao-descricao{
@@ -256,18 +385,19 @@ input{
 	bottom: 5px;
 	font-family: 'Playfair Display', serif;
 	text-align: left;
-	color: white;
+	color: black;
 	font-size: 18px;
 	padding: 5px 3%;
 	
 }
 
-.educacao li:hover .titulo-educacao2, .educacao li:hover .educacao-descricao {
+.formacao-academica li:hover .subtitulo-educacao, .formacao-academica li:hover .educacao-descricao {
 	color: white;
 }
 
-.educacao li:hover .titulo-educacao{
+.formacao-academica li:hover .titulo-educacao{
 	transform: scale(110%);
+	color: #9bf6ff;
 }
 
 #descricao1{
@@ -282,43 +412,90 @@ input{
 	padding: 25px 0 7px;
 }
 
-/*________________FIm Educação________________________*/
+.caixa-escondida{
+	display: none;
+}
 
-/*_______________Inicio das Habilidades_______________*/
+.mostra-caixa-garotas, .mostra-caixa-garotas p, .mostra-caixa-cisco, .mostra-caixa-cisco p, .mostra-caixa-jovens, .mostra-caixa-jovens p{
+	text-transform: none;
+	font-weight: none;
+	display: block;
+	color: black;
+	width: 18em;
+	padding: 5px 5px;
+	font-size: 1em;
+
+}
+
+/*________________________________Inicio das Habilidades_______________________*/
 
 .caixa-habilidades{
-	/*background: linear-gradient(5deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%);*/
+	height: 700px;
+	background-color: #fdb6d2;
 	position: relative;
-	top: 850px;
+	top: 650px;
+}
+
+#title-habilidades{
+	color: rgba(189, 0, 69, 1);
 }
 
 .logos-habilidades{
-	padding: 50px 0  80px;
+	padding: 0  80px;
 	text-align: center;
-}
-#logo-linux{
-	width: 20em;
 }
 
 .grid-container {
-	display: inline-grid;
-	grid-template-columns: auto auto auto;
+	display: block;
 	padding: 5px;
 	margin: 0 auto ;
 	gap: 50px;  
 }
 
-.grid-item{
+#conteiner-a, #conteiner-b{
+	display: none;
+}
+
+.mostraB, .mostraA{
+	display: none;
+}
+
+.grid-container-soft {
+	display: inline-grid;
+	grid-template-columns: auto auto auto;
+	padding: 5px;
+	margin: 20px auto ;
+	gap: 10px;  
+}
+
+.caixa-btn-grid{
+	display: inline-grid;
+	grid-template-columns: auto auto auto;
+	padding: 5px;
+	margin: 0 auto;
+	gap: 30px;  
+	text-align: center;
+}
+
+.btn-grid-item{
+	width: 200px;
+	border: 1px solid #000;
+}
+
+.grid-item, .btn-grid-item{
 	font-family: 'Playfair Display', serif;
-	color: white;
+	color: black;
 	text-transform: uppercase;
 	padding: 10px;
-	width: 200px;
   margin: 0 auto;
   gap: 300px 300px;
   text-align: center;
-  border: 1px solid #fff;
   transition: .6s;
+}
+
+.grid-item{
+	width: 180px;
+	border: 1px solid rgba(189, 0, 69, 1);
 }
 
 .grid-item p {
@@ -326,7 +503,8 @@ input{
 	font-weight: bold;
 }
 
-.grid-item:hover{
+.btn-grid-item:hover{
+	cursor: pointer;
 	background-color: rgba(189, 0, 69, 1);
 	border: none;
 	bottom: 50%;
@@ -342,76 +520,232 @@ input{
 	font-size: 70px;
 }
 
-.grid-item:hover .fa-users-line, .grid-item:hover .fa-puzzle-piece{
+.btn-grid-item:hover .fa-users-line, .btn-grid-item:hover .fa-puzzle-piece{
 	position: relative;
 	padding: 10px;
 	color: #fff;
 	transform: scale(120%);
 }
 
+/*________________________________Inicio Caixa Experiencias_________________________________*/
 
-
-/*_______________Fim das Habilidades_______________*/
-
-/*.fundo-sobremim{     - ADICIONAR PARA O BACKGROUND DE VIDEO FIXO/Caso não dê certo as legendas!
-	width: 100%;
-	overflow: hidden; ----serve para retirar o scroll
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.fundo-sobremim video{
-	position: absolute;
-	width: 100%;
-	max-height: 670px;
-	top: 0;
-	left: 0;
-	object-fit: cover;
-	z-index: -1;
-}
-.fundo-sobremim .conteudo-sobremim{
+.caixa-experiencia{
+	text-align: center;
+	background-color: #ffe27f;
 	position: relative;
-	max-width: 600px;
+	top: 650px;
+	height: 700px;
+	width: 100%;
+}
+
+#title-experiencias{
+	color: #FF4500 ;
+}
+
+.Projetos{
+	display: inline-block;
+	width: 80%;
+	margin: 10px 10px;
+}
+
+.Projetos h3{
+	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;
+	color: 	#FF4500;
+	margin: 0;
+	text-align: left;
+  font-weight: bold;
+	padding: 10px 20% 0;
+}
+
+.Empregos h3{
+	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;
+	color: 	#FF4500;
+	margin: 0;
+	text-align: left;
+  font-weight: bold;
+	padding: 10px 26% 0;
+}
+
+.grid-projeto{
+	display: inline-grid;
+	grid-template-columns: auto auto auto;
+	padding: 5px;
+	margin: 0 auto;
+	gap: 10px;  
+	text-align: center;
+}
+
+.item-projeto{
+	padding: 50px 70px;
+	text-transform: uppercase;
+	color: orangered;
+	background-color: none;
+	border: 1px solid rgba(255 ,69 ,0, 1);
+}
+
+.item-projeto:hover{
+	background-color: rgba(255, 255, 255, .2);
+	color: black;
+}
+
+.Empregos{
+	width: 100%;
+	padding: 0;
 	margin: 0 auto;
 }
-*/
 
-.conteudo-sobremim{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform:translate(-50%, -50%) ;
-	z-index: 99;
-	font-family: 'Playfair Display', serif;
-	justify-content: center;
-	align-items: center;
+.item-emprego{
+	transform: translate(48%);
+	margin: 5px 0 0 0;
+	padding: 7px;
+	width: 49.8%;
+	color: black;
+	border: 1px solid rgba(255 ,69 ,0, 1);
 }
 
-.titulos{
-	font-family: 'Playfair Display', serif;
-	padding: 90px 0 40px 0;
+.item-emprego h5{
+	padding: 5px 5px 10px;
+	color: orangered;
 	text-transform: uppercase;
-	color: white;
-	font-size: 3em;
-	text-align: center;
-	z-index: 1;
 }
 
-.textos{
-	font-family: 'Playfair Display', serif;
-	width: 1000px;
-	color: white;
+.item-emprego p{
+	padding: 5px;
+	text-align: left;
+}
+
+/*________________________________Inicio Caixa Interesses_________________________________*/
+
+.caixa-interesses{
+	background-color: #95f780;
+	top: 650px;
+	height: 700px;
+	width: 100%;
+	position: relative;
+}
+
+#title-interesses{
+	color: #006400;
+}
+
+.caixa-itens-interesses li{
+	display: inline-block;
+	color: green;
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 2em 5.5em 0 ;
+	padding: 5px;
+	top: 4px;
+	text-transform: uppercase;
+	text-align: center;
+	width: 10em;
+	height: 1em;
+}
+
+#menu-interesses{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#caixa-grid-interesses{
+	display: inline-grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
 	padding: 10px 0 10px;
-	font-size: 1.4em;
+	margin: 0 auto;
+	gap: 10px;  
 	text-align: center;
-	z-index: 1;
+
 }
 
-.textos-menores{
-	font-family: 'Playfair Display', serif;
-	color: white;
-	padding: 10px 0 0;
-	font-size: 1.em;
+#caixa-filmes-e-series, #caixa-musicas, #caixa-livros{
+	display: inline-block;
+	grid-template-columns: auto auto auto;
+	margin: 0 auto;
+	gap: 5px;  
 	text-align: center;
-	z-index: 1;
 }
+
+.filme, .musica, .livro{
+	margin: 5px 5px 0 5px;
+	display: inline-block;
+	/*display: none;*/
+}
+
+.musica, .filme, .livro{
+	cursor: pointer;
+	padding: 5px 0 0;
+}
+
+.musica img, .filme img, .livro img{
+	filter: brightness(0.2);
+	margin: 0 auto;
+	transition: .3s;
+}
+
+.musica img:hover, .filme img:hover, .livro img:hover{
+	filter: brightness(1.0);	
+}
+
+/*________________________________Inicio Footer_________________________________*/
+
+footer{
+	position: relative;
+	background-color: black;
+	top: 650px;
+	height: auto;
+}
+
+footer h3{
+	color: white;
+	font-family: 'Playfair Display', serif;
+	margin: 0;
+	padding: 10px 0;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	left: 150px;
+}
+
+.titulo-footer{
+	text-align: left;
+	color: white;
+	margin: 0 200px 0 0;
+  display: inline-block;
+  font-size: 2em;
+  padding: 5%;
+  font-family: 'Parisienne', cursive;
+}
+
+.caixa-meio-de-contato{
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	top: 30px;
+}
+
+.caixa-copyright{
+	text-align: center;
+	font-size: 1.2em;
+	margin: 10px 0 10px 0;
+	display: block;
+	color: white;
+}
+
+.caixa-copyright p {
+	padding: 0 0 20px 0;
+}
+
+.logos-meiodecontato{
+	left: 50%;
+  transform: translate(-50%);
+  position: relative;
+  padding: 10px 0 10px;
+}
+
+.logos-meiodecontato a{
+	padding: 0 5px;
+}
+
