@@ -1,7 +1,7 @@
 # Projeto de Portifólio Alura
 Criação de um currículo, estilo site web. Para conclusão do curso Garotas Digitais.
 
-
+##EDITANDO A VERSÃO DO PORTIFÓLIO, PELO BRANCH TESTE
 
 ### Sumário
 - [X] Cabeçalho (Se der tempo, add efeito sublinhado no hover)
