@@ -1,3 +1,8 @@
+html{
+	/*a cada 1rem - 10px*/
+	font-size: 62,5%;
+}
+
 body{
 	margin: 0;
 	padding: 0;
@@ -12,7 +17,7 @@ header{
 	height: 70px;
 	top: 0;
 	z-index: 100; /*Ordem do elemento na profundidade (quanto maior, mais a frente...)*/
-    transition: background-color 1s ease-in-out;/*Transição do header*/
+		transition: background-color 1s ease-in-out;/*Transição do header*/
 }
 
 .titulos{
@@ -20,7 +25,7 @@ header{
 	padding: 90px 0 40px 0;
 	color: white;
 	text-transform: uppercase;
-	font-size: 3em;
+	font-size: 3.0rem;
 	text-align: center;
 	z-index: 1;
 }
@@ -30,7 +35,7 @@ header{
 	width: 1000px;
 	color: white;
 	padding: 10px 0 10px;
-	font-size: 1.4em;
+	font-size: 1.4rem;
 	text-align: center;
 	z-index: 1;
 }
@@ -39,17 +44,17 @@ header{
 	font-family: 'Playfair Display', serif;
 	color: white;
 	padding: 10px 0 0;
-	font-size: 1.em;
+	font-size: 1rem;
 	text-align: center;
 	z-index: 1;
 }
 
 .changeStyle {
-  background-color: rgba(0, 0, 0, 0.2); /*Muda a cor do header ao scrollar*/
+	background-color: rgba(0, 0, 0, 0.2); /*Muda a cor do header ao scrollar*/
 }
 
 .changeStyle + .titulo-header + nav a {
-  color: black;
+	color: black;
 }
  
 .caixa-header{
@@ -66,7 +71,7 @@ header{
 	position: absolute;
 	color: white;
 	font-family: 'Parisienne', cursive;
-	font-size: 25px;
+	font-size: 1.5rem;
 	padding: 5px 0;
 	top: 10px;
 	left: 30px;
@@ -91,7 +96,7 @@ nav a{
 	text-transform: uppercase;
 	color: white;
 	font-weight: bold;
-	font-size: 13px;
+	font-size: 0.8rem;
 	text-decoration: none;
 }
 
@@ -131,7 +136,7 @@ a{
 }
 
 .fa-discord, .fa-instagram, .fa-github, .fa-linkedin, .fa-whatsapp, .fa-envelope{
-	font-size: 20px;
+	font-size: 1.2rem;
 	color: white;
 	transition: .3s;
 }
@@ -142,7 +147,7 @@ a{
 /*--------------------------Incio Caixa sobre mim--------------------------*/
 
 .caixa-sobremim{
-	height: 650px;
+	height: 100vh;
 	width: 100vw;	
 	overflow: hidden;
 	position: absolute;
@@ -164,6 +169,8 @@ a{
 }
 
 .navegação{
+	width: 100%;
+	justify-content: center;
 	position: absolute; /*Qualquer lugar da tela/elemento pai*/
 	bottom: 7%;
 	left: 50%;
@@ -226,7 +233,7 @@ input{
 }
 
 .titulo-colorido{
-	font-size: 60px;
+	font-size: 4.0rem;
 	text-align: center;
 	display: inline-block;
 }
@@ -283,7 +290,7 @@ input{
 	height: 680px;
 }
 .formacao-academica h3, .Projetos h3, .Empregos h3, .Cursos h3{
-	font-size: 20px;
+	font-size: 1.1rem;
 	margin: 5x 0;
 }
 
@@ -319,7 +326,7 @@ input{
 }
 
 .titulo-item-curso{
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	text-transform: uppercase;
 	text-align: center;
 	top: 1em;
@@ -328,7 +335,7 @@ input{
 .descricao-item-curso{
 	text-transform: none;
 	color: black;
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	text-align: left;
 	top: 0.4em;
 }
@@ -353,7 +360,7 @@ input{
 }
 
 .formacao-academica li:hover h2{
-	font-size: 24px;
+	font-size: 1.7rem;
 }
 
 #educacao{
@@ -369,14 +376,14 @@ input{
 }
 
 .titulo-educacao{
-	font-size: 15px;
+	font-size: 1rem;
 }
 
 .subtitulo-educacao{
 	text-transform: uppercase;
 	font-family: 'Playfair Display', serif;
 	color: black;
-	font-size: 15px;
+	font-size: 0.8rem;
 	padding: 4px 5px 5px;
 }
 
@@ -386,7 +393,7 @@ input{
 	font-family: 'Playfair Display', serif;
 	text-align: left;
 	color: black;
-	font-size: 18px;
+	font-size: 1.2rem;
 	padding: 5px 3%;
 	
 }
@@ -423,7 +430,7 @@ input{
 	color: black;
 	width: 18em;
 	padding: 5px 5px;
-	font-size: 1em;
+	font-size: 1rem;
 
 }
 
@@ -487,10 +494,10 @@ input{
 	color: black;
 	text-transform: uppercase;
 	padding: 10px;
-  margin: 0 auto;
-  gap: 300px 300px;
-  text-align: center;
-  transition: .6s;
+	margin: 0 auto;
+	gap: 300px 300px;
+	text-align: center;
+	transition: .6s;
 }
 
 .grid-item{
@@ -517,14 +524,14 @@ input{
 	position: relative;
 	padding: 10px;
 	color: rgba(189, 0, 69, 1);
-	font-size: 70px;
+	font-size: 3.5rem;
 }
 
-.btn-grid-item:hover .fa-users-line, .btn-grid-item:hover .fa-puzzle-piece{
+.btn-grid-item:hover .fa-users-line, .btn-grid-item:hover .fa-puzzle-piece, .btn-grid-item:hover p{
 	position: relative;
 	padding: 10px;
 	color: #fff;
-	transform: scale(120%);
+	transform: scale(110%);
 }
 
 /*________________________________Inicio Caixa Experiencias_________________________________*/
@@ -554,7 +561,7 @@ input{
 	color: 	#FF4500;
 	margin: 0;
 	text-align: left;
-  font-weight: bold;
+	font-weight: bold;
 	padding: 10px 20% 0;
 }
 
@@ -564,7 +571,7 @@ input{
 	color: 	#FF4500;
 	margin: 0;
 	text-align: left;
-  font-weight: bold;
+	font-weight: bold;
 	padding: 10px 26% 0;
 }
 
@@ -633,7 +640,7 @@ input{
 .caixa-itens-interesses li{
 	display: inline-block;
 	color: green;
-	font-size: 1.3em;
+	font-size: 1.3rem;
 	font-weight: bold;
 	margin: 2em 5.5em 0 ;
 	padding: 5px;
@@ -704,7 +711,7 @@ footer h3{
 	margin: 0;
 	padding: 10px 0;
 	text-transform: uppercase;
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	left: 150px;
 }
 
@@ -712,10 +719,10 @@ footer h3{
 	text-align: left;
 	color: white;
 	margin: 0 10em 0 5em;
-  display: inline-block;
-  font-size: 2em;
-  padding: 5%;
-  font-family: 'Parisienne', cursive;
+	display: inline-block;
+	font-size: 2rem;
+	padding: 5%;
+	font-family: 'Parisienne', cursive;
 }
 
 .caixa-meio-de-contato{
@@ -728,24 +735,32 @@ footer h3{
 
 .caixa-copyright{
 	text-align: center;
-	font-size: 1.2em;
 	margin: 1em 0 1.9em 0;
 	display: block;
 	color: white;
 }
 
 .caixa-copyright p {
+	font-size: 1.2rem;
 	padding: 0 0 20px 0;
 }
 
 .logos-meiodecontato{
 	left: 50%;
-  transform: translate(-50%);
-  position: relative;
-  padding: 10px 0 10px;
+	transform: translate(-50%);
+	position: relative;
+	padding: 10px 0 10px;
 }
 
 .logos-meiodecontato a{
 	padding: 0 5px;
 }
 
+@media screen and (max-widht: 768px){}
+
+
+
+
+@media screen and (max-widht: 630px){}
+@media screen and (max-widht: 540px){}
+@media screen and (max-widht: 320px){}
