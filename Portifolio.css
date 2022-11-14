@@ -287,7 +287,7 @@ input{
 	background-color: #35d3e3;
 	position: relative;
 	top: 650px;
-	height: 680px;
+	height: 100vh;
 }
 .formacao-academica h3, .Projetos h3, .Empregos h3, .Cursos h3{
 	font-size: 1.1rem;
@@ -437,7 +437,7 @@ input{
 /*________________________________Inicio das Habilidades_______________________*/
 
 .caixa-habilidades{
-	height: 700px;
+	height: 100vh;
 	background-color: #fdb6d2;
 	position: relative;
 	top: 650px;
@@ -541,7 +541,7 @@ input{
 	background-color: #ffe27f;
 	position: relative;
 	top: 650px;
-	height: 700px;
+	height: 100vh;
 	width: 100%;
 }
 
@@ -628,7 +628,7 @@ input{
 .caixa-interesses{
 	background-color: #95f780;
 	top: 650px;
-	height: 700px;
+	height: 100vh;
 	width: 100%;
 	position: relative;
 }
